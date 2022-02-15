@@ -5,6 +5,12 @@ public abstract class Item {
     private int levelRequirement;
     private Slot slot;
 
+    public Item(String name, int levelRequirement, Slot slot) {
+        this.name = name;
+        this.levelRequirement = levelRequirement;
+        this.slot = slot;
+    }
+
     public String getName() {
         return name;
     }
