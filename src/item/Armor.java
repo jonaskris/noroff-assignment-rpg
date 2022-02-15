@@ -1,5 +1,9 @@
 package item;
 
 public class Armor extends Item {
-    ArmorType armorType;
+    private ArmorType armorType;
+
+    public ArmorType getArmorType() {
+        return armorType;
+    }
 }
