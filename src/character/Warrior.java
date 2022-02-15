@@ -1,6 +1,8 @@
 package character;
 
 import attribute.Attributes;
+import item.ArmorType;
+import item.WeaponType;
 
 public class Warrior extends Character {
     public Warrior(String name) {
@@ -10,5 +12,15 @@ public class Warrior extends Character {
     @Override
     protected void levelUpIncreaseAttributes() {
         this.baseAttributes.add(new Attributes(3, 2, 1));
+    }
+
+    @Override
+    protected boolean canEquipWeaponType(WeaponType weaponType) {
+        return weaponType == WeaponType.Axe || weaponType == WeaponType.Hammer || weaponType == WeaponType.Sword;
+    }
+
+    @Override
+    protected boolean canEquipArmorType(ArmorType armorType) {
+        return armorType == ArmorType.Mail || armorType == ArmorType.Plate;
     }
 }
