@@ -10,7 +10,12 @@ class CharacterTest {
 
     @BeforeEach
     public void setup() {
-        character = new Character("name", new Attributes(0, 0, 0, 0)) {};
+        character = new Character("name", new Attributes(0, 0, 0)) {
+            @Override
+            protected void levelUpIncreaseAttributes() {
+                // Not tested in this class
+            }
+        };
     }
 
     @Test
