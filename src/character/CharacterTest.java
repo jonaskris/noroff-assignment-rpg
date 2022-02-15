@@ -27,7 +27,7 @@ class CharacterTest {
 
     @Test
     void TestLevelUp_LevelIsTwo_ShouldPass() {
-        final int expected = 1;
+        final int expected = 2;
 
         character.levelUp();
 
