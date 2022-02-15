@@ -10,18 +10,23 @@ class CharacterTest {
 
     @BeforeEach
     public void setup() {
-        character = new Character("name", new Attributes(0, 0, 0, 0)) {
-            @Override
-            public void levelUp() {
-
-            }
-        };
+        character = new Character("name", new Attributes(0, 0, 0, 0)) {};
     }
 
     @Test
     public void TestCreateCharacter_LevelIsOne_ShouldPass() {
         final int expected = 1;
-        assertEquals(character.level, expected);
+
+        assertEquals(expected, character.getLevel());
+    }
+
+    @Test
+    public void TestLevelUp_LevelIsTwo_ShouldPass() {
+        final int expected = 1;
+
+        character.levelUp();
+
+        assertEquals(expected, character.getLevel());
     }
 
 }

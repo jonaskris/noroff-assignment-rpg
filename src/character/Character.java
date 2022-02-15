@@ -15,7 +15,9 @@ public abstract class Character {
         this.level = 1;
     }
 
-    public abstract void levelUp();
+    public void levelUp() {
+        level += 1;
+    }
 
     public String getName() {
         return name;
