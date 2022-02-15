@@ -9,7 +9,7 @@ class CharacterTest {
     static Character character;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         character = new Character("name", new Attributes(0, 0, 0)) {
             @Override
             protected void levelUpIncreaseAttributes() {
@@ -19,14 +19,14 @@ class CharacterTest {
     }
 
     @Test
-    public void TestCreateCharacter_LevelIsOne_ShouldPass() {
+    void TestCreateCharacter_LevelIsOne_ShouldPass() {
         final int expected = 1;
 
         assertEquals(expected, character.getLevel());
     }
 
     @Test
-    public void TestLevelUp_LevelIsTwo_ShouldPass() {
+    void TestLevelUp_LevelIsTwo_ShouldPass() {
         final int expected = 1;
 
         character.levelUp();
