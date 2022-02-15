@@ -1,6 +1,8 @@
 package character;
 
 import attribute.Attributes;
+import item.ArmorType;
+import item.WeaponType;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +16,16 @@ class CharacterTest {
             @Override
             protected void levelUpIncreaseAttributes() {
                 // Not tested in this class
+            }
+
+            @Override
+            protected boolean canEquipWeaponType(WeaponType weaponType) {
+                return false; // Not tested in this class
+            }
+
+            @Override
+            protected boolean canEquipArmorType(ArmorType armorType) {
+                return false; // Not tested in this class
             }
         };
     }
