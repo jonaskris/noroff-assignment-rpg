@@ -3,10 +3,10 @@ package character;
 import attribute.Attributes;
 
 public abstract class Character {
-    String name;
-    int level;
-    Attributes baseAttributes; // Initial attributes + attributes from level
-    Attributes bonusAttributes; // attribute.Attributes gained from equipped items
+    private String name;
+    private int level;
+    private Attributes baseAttributes; // Initial attributes + attributes from level
+    private Attributes bonusAttributes; // Attributes gained from equipped items
 
     public Character(String name, Attributes baseAttributes) {
         this.baseAttributes = baseAttributes;
@@ -16,4 +16,20 @@ public abstract class Character {
     }
 
     public abstract void levelUp();
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public Attributes getBaseAttributes() {
+        return baseAttributes;
+    }
+
+    public Attributes getBonusAttributes() {
+        return bonusAttributes;
+    }
 }
