@@ -1,30 +1,40 @@
 # noroff-assignment-rpg
-This repository contains my solution to the RPG assignment in the Noroff Fullstack Course.
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+This project is my solution to the first Java assignment during the Noroff Fullstack Java course.
 
 ## Table of Contents
 
-- [noroff-assignment-rpg](#noroff-assignment-rpg)
-    - [Table of Contents](#table-of-contents)
-    - [Install](#install)
-        - [Clone repository:](#clone-repository)
-    - [Usage](#usage)
-    - [Maintainer](#maintainer)
-    - [License](#license)
+- [Install](#install)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Install
-### Clone repository:
-
 ```
-git clone git@github.com:jonaskris/noroff-assignment-rpg.git
+git clone https://github.com/jonaskris/noroff-assignment-rpg
 ```
 
 ## Usage
-Tests can be run using IntelliJ Idea
+Main executable and tests can be run using IntelliJ Idea.
+The project was developed and tested using Java 17 SDK.
 
-## Maintainer
+### Test
+Right click ./test directory and select "Run 'All Tests'" to run all tests.
 
-[@jonaskris](https://github.com/jonaskris)
+### Main
+Right click ./src/Main.java and select "Run 'Main.main()'" to run main executable.
+
+## Maintainers
+[Jonas Kristoffersen @Jonaskris](https://github.com/jonaskris)
+
+
+## Contributing
+
+PRs accepted.
+
+Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
-MIT © 2022 Jonas Kristoffersen
+MIT © Jonas Kristoffersen.
