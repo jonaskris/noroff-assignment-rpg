@@ -37,7 +37,7 @@ public abstract class Character {
     protected abstract boolean canEquipWeaponType(WeaponType weaponType);
     protected abstract boolean canEquipArmorType(ArmorType armorType);
 
-    public void equip(Item item) throws InvalidWeaponException, InvalidArmorException {
+    public boolean equip(Item item) throws InvalidWeaponException, InvalidArmorException {
         if(item instanceof Weapon) {
             Weapon weaponItem = (Weapon)item;
 
@@ -56,6 +56,7 @@ public abstract class Character {
         equipment.put(item.getSlot(), item);
         if(item instanceof Armor)
             updateBonusAttributes();
+        return true;
     }
 
     protected abstract int extractPrimaryAttribute(Attributes attributes);
