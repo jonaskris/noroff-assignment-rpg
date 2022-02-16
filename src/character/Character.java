@@ -8,8 +8,8 @@ import java.util.HashMap;
 public abstract class Character {
     private String name;
     private int level;
-    protected Attributes baseAttributes; // Initial attributes + attributes from level
-    private Attributes bonusAttributes; // Attributes gained from equipped items
+    protected Attributes baseAttributes;    // Initial attributes + attributes gained from levels
+    private Attributes bonusAttributes;     // Attributes gained from equipped items
     private HashMap<Slot, Item> equipment;
 
     public Character(String name, Attributes baseAttributes) {
@@ -17,6 +17,14 @@ public abstract class Character {
         this.bonusAttributes = new Attributes(0, 0, 0);
         this.name = name;
         this.level = 1;
+    }
+
+    private void updateBonusAttributes() {
+        bonusAttributes = equipment.entrySet()
+                .stream()
+                .filter(element -> element.getValue() instanceof Armor)
+                .map(element -> ((Armor)element.getValue()).getAttributes())
+                .reduce(new Attributes(0, 0, 0), (acc, curr) -> {acc.add(curr); return acc; });
     }
 
     protected abstract void levelUpIncreaseAttributes();
