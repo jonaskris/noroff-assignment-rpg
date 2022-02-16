@@ -54,6 +54,23 @@ public abstract class Character {
         }
         
         equipment.put(item.getSlot(), item);
+        updateBonusAttributes();
+    }
+
+    protected abstract int extractPrimaryAttribute(Attributes attributes);
+
+    public float getDamagePerSecond() {
+        Attributes totalAttributes = new Attributes(baseAttributes);
+        totalAttributes.add(bonusAttributes);
+
+        int totalPrimaryAttribute = extractPrimaryAttribute(totalAttributes);
+
+        Weapon weapon = (Weapon)equipment.get(Slot.Weapon);
+        float weaponDamagePerSecond = 1.0f;
+        if(weapon != null)
+            weaponDamagePerSecond = weapon.getDamagePerSecond();
+
+        return weaponDamagePerSecond * (1.0f + totalPrimaryAttribute / 100.0f);
     }
 
     public String getName() {

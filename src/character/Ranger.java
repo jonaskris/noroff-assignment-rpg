@@ -23,4 +23,9 @@ public class Ranger extends Character {
     protected boolean canEquipArmorType(ArmorType armorType) {
         return armorType == ArmorType.Mail || armorType == ArmorType.Leather;
     }
+
+    @Override
+    protected int extractPrimaryAttribute(Attributes attributes) {
+        return attributes.getDexterity();
+    }
 }

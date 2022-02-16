@@ -23,4 +23,9 @@ public class Warrior extends Character {
     protected boolean canEquipArmorType(ArmorType armorType) {
         return armorType == ArmorType.Mail || armorType == ArmorType.Plate;
     }
+
+    @Override
+    protected int extractPrimaryAttribute(Attributes attributes) {
+        return attributes.getStrength();
+    }
 }

@@ -27,6 +27,11 @@ class CharacterTest {
             protected boolean canEquipArmorType(ArmorType armorType) {
                 return false; // Not tested in this class
             }
+
+            @Override
+            protected int extractPrimaryAttribute(Attributes attributes) {
+                return 0; // Not tested in this class
+            }
         };
     }
 

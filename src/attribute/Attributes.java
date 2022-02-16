@@ -9,6 +9,12 @@ public class Attributes {
         this.intelligence = intelligence;
     }
 
+    public Attributes(Attributes other) {
+        this.strength = other.strength;
+        this.dexterity = other.dexterity;
+        this.intelligence = other.intelligence;
+    }
+
     public void add(Attributes attributes) {
         this.strength += attributes.strength;
         this.dexterity += attributes.dexterity;

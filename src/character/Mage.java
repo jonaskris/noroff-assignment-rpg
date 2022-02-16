@@ -23,4 +23,9 @@ public class Mage extends Character {
     protected boolean canEquipArmorType(ArmorType armorType) {
         return armorType == ArmorType.Cloth;
     }
+
+    @Override
+    protected int extractPrimaryAttribute(Attributes attributes) {
+        return attributes.getIntelligence();
+    }
 }
