@@ -10,7 +10,7 @@ public abstract class Character {
     private int level;
     protected Attributes baseAttributes;    // Initial attributes + attributes gained from levels
     private Attributes bonusAttributes;     // Attributes gained from equipped items
-    private HashMap<Slot, Item> equipment;
+    private HashMap<Slot, Item> equipment = new HashMap<>();
 
     public Character(String name, Attributes baseAttributes) {
         this.baseAttributes = baseAttributes;
