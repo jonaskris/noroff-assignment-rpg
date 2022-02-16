@@ -11,6 +11,8 @@ public class Weapon extends Item {
         this.attackSpeed = attackSpeed;
     }
 
+    public float getDamagePerSecond() { return damage * attackSpeed; }
+
     public float getDamage() {
         return damage;
     }
