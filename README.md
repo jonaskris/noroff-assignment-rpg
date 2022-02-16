@@ -17,12 +17,15 @@ git clone https://github.com/jonaskris/noroff-assignment-rpg
 
 ## Usage
 Main executable and tests can be run using IntelliJ Idea.
-The project was developed and tested using Java 17 SDK.
+The project was developed and tested using Java OpenJDK 17 and JUnit 5.8.1.
 
 ### Test
 Right click ./test directory and select "Run 'All Tests'" to run all tests.
 
 ### Main
+The main executable demonstrates creation of a character with equipped weapon and armor.
+The created character's 'character sheet' is finally printed to console.
+
 Right click ./src/Main.java and select "Run 'Main.main()'" to run main executable.
 
 ## Maintainers
