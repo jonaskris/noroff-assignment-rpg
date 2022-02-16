@@ -54,7 +54,8 @@ public abstract class Character {
         }
         
         equipment.put(item.getSlot(), item);
-        updateBonusAttributes();
+        if(item instanceof Armor)
+            updateBonusAttributes();
     }
 
     protected abstract int extractPrimaryAttribute(Attributes attributes);
