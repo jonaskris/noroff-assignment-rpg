@@ -3,6 +3,7 @@ package character;
 import attribute.Attributes;
 import item.*;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 
 public abstract class Character {
@@ -89,5 +90,22 @@ public abstract class Character {
 
     public Attributes getBonusAttributes() {
         return bonusAttributes;
+    }
+
+    @Override
+    public String toString() {
+        Attributes totalAttributes = new Attributes(baseAttributes);
+        totalAttributes.add(bonusAttributes);
+
+        final StringBuilder sb = new StringBuilder("Character Sheet\n");
+        sb.append("Name: '").append(name).append("'\n");
+        sb.append("Level: ").append(level).append("\n");
+        sb.append("Attributes:\n");
+        sb.append("\tStrength: ").append(totalAttributes.getStrength()).append("\n");
+        sb.append("\tDexterity: ").append(totalAttributes.getDexterity()).append("\n");
+        sb.append("\tIntelligence: ").append(totalAttributes.getIntelligence()).append("\n");
+        DecimalFormat format = new DecimalFormat("0.00");
+        sb.append("DPS: ").append(format.format(getDamagePerSecond())).append("\n");
+        return sb.toString();
     }
 }
